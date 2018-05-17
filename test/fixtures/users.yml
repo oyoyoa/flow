@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  upload_file: 
+  upload_filename: MyString
+
+two:
+  name: 
+  upload_file: 
+  upload_filename: MyString

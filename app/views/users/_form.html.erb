@@ -1,0 +1,33 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div id="upload_area" class="drop_field">
+    <%= form.label :upload_file, "開発データ" %>
+    <div id="drop_area">
+      <%= form.file_field :upload_file %>
+    </div>
+    <div id="drop_area">
+      <%= form.file_field :upload_file %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= form.label :name, '名前' %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Upload" %>
+  </div>
+<% end %>
